@@ -41,13 +41,6 @@ struct GetValueRecursieve<Key, TList, GenScatterHierarchy<Key, Unit>, Unit> {
         return x.val;
     }
 };
-
-template<class Key, class TList, template<class> class Unit>
-struct GetValueRecursieve<Key, TList, GenScatterHierarchy<TailClass, Unit>, Unit> {
-    static Key& getVal(TList& x) {
-        return new Key();
-    }
-};
 template<class Key, template<class> class Unit>
 struct GetValue {
     template<class TList>
